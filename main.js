@@ -11,7 +11,9 @@ async function getExchangeRate(daMoeda, paraMoeda){
         } else{
             throw new Error('Erro ao buscar as taxas de câmbio');
         }
-    } catch{
-
+    } catch(error){
+        console.error("Erro:", error);
+        return null;
     }
+    
 }
