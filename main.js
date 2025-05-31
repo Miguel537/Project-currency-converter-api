@@ -17,3 +17,16 @@ async function getExchangeRate(daMoeda, paraMoeda){
     }
     
 }
+
+document.getElementById('currency-form').addEventListener('submit', async function (event){
+    event.preventDefault();
+
+    const valor = document.getElementById('amount').value;
+    const daMoeda = document.getElementById('amount').value;
+    const paraMoeda = document.getElementById('amount').value;
+
+    // Buscar taxa de câmbio da API
+    const exchangeRate = await getExchangeRate(daMoeda, paraMoeda);
+
+    
+})
