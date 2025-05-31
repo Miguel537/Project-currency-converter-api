@@ -8,6 +8,8 @@ async function getExchangeRate(daMoeda, paraMoeda){
 
         if(data.result === "sucess"){
             return data.conversion_rates[paraMoeda];
+        } else{
+            throw new Error('Erro ao buscar as taxas de câmbio');
         }
     } catch{
 
